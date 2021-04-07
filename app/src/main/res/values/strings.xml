@@ -31,4 +31,5 @@
     <string name="_250g_125_cal">250g | 125 Cal</string>
     <string name="food_desc">Food Description Food Description Food Description Food Description Food Description Food Description</string>
     <string name="food_name">Food Name</string>
+    <string name="shopping_cart">Shopping Cart</string>
 </resources>

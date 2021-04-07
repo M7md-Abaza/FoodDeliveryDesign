@@ -9,8 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="ui_green">#09B44D</color>
-    <color name="ui_blue">#D0F1DD</color>
+    <color name="ui_lite_green">#D0F1DD</color>
     <color name="ui_Black">#262626</color>
+    <color name="ui_blue">#D0D6F1</color>
     <color name="ui_white">#F6F6F6</color>
 
 </resources>
