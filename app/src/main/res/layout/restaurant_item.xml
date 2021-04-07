@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/restaurantImage_item"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/dish_two"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/restaurantFoodName_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:text="CITRONELLE"
+                android:textColor="@color/ui_white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantImage_item"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantImage_item"
+                app:layout_constraintStart_toStartOf="@+id/restaurantImage_item"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/restaurantFoodCountry_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:text="@string/french_cuisine"
+                android:textColor="@color/ui_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantImage_item"
+                app:layout_constraintEnd_toStartOf="@+id/restaurantFoodTime_item"
+                app:layout_constraintStart_toStartOf="@+id/restaurantImage_item" />
+
+            <TextView
+                android:id="@+id/restaurantFoodTime_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:text="@string/_40_60_min"
+                android:textColor="@color/ui_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantImage_item"
+                app:layout_constraintEnd_toStartOf="@+id/restaurantFoodPrice_item"
+                app:layout_constraintStart_toEndOf="@+id/restaurantFoodCountry_item" />
+
+            <TextView
+                android:id="@+id/restaurantFoodPrice_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:text="@string/_15_20_usd"
+                android:textColor="@color/ui_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantImage_item"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantImage_item"
+                app:layout_constraintStart_toEndOf="@+id/restaurantFoodTime_item" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/rounded_btn_bg"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="@+id/restaurantImage_item"
+                app:layout_constraintTop_toTopOf="@+id/restaurantImage_item">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:padding="2dp"
+                    android:src="@drawable/star"
+                    app:layout_constraintEnd_toStartOf="@+id/rate_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/foodDesc_tv"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/restaurantFoodRate_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/_4_5"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
