@@ -32,4 +32,7 @@
     <string name="food_desc">Food Description Food Description Food Description Food Description Food Description Food Description</string>
     <string name="food_name">Food Name</string>
     <string name="shopping_cart">Shopping Cart</string>
+    <string name="my_profile">My Profile</string>
+    <string name="mohamed_abaza">Mohamed Abaza</string>
+    <string name="my_orders">My Orders</string>
 </resources>
