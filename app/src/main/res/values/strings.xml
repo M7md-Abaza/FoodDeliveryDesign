@@ -35,4 +35,11 @@
     <string name="my_profile">My Profile</string>
     <string name="mohamed_abaza">Mohamed Abaza</string>
     <string name="my_orders">My Orders</string>
+    <string name="food_country">Food Country</string>
+    <string name="food_time">Food time</string>
+    <string name="food_price">Food Price</string>
+    <string name="food_description">Food Description</string>
+    <string name="food_rate">Food Rate</string>
+    <string name="add_food">Add Food</string>
+    <string name="get_started">Get Started...</string>
 </resources>

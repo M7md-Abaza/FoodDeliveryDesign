@@ -8,7 +8,7 @@
     tools:context=".ui.activities.RestaurantActivity">
 
     <ImageView
-        android:id="@+id/back_btn"
+        android:id="@+id/backButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -35,7 +35,7 @@
         android:textColorHint="#A6A6A6"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back_btn"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Autofill,TextFields" />
 
