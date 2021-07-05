@@ -36,12 +36,14 @@ class AddFoodActivity : AppCompatActivity() {
         val foodRate = foodRate.text.toString().trim()
 
         if (inputCheck(foodName, foodDescription, foodCountry, foodTime, foodPrice, foodRate)) {
-            val food =
-                Food(0, foodName, foodDescription, foodCountry, foodTime, foodPrice, foodRate)
 
+            val food =
+                Food(foodName, foodDescription, foodCountry, foodTime, foodPrice, foodRate, false)
             mFoodViewModel.insertFood(food)
+
             Toast.makeText(this, "Successfully added!", Toast.LENGTH_LONG).show()
             onBackPressed()
+
         } else {
             Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_LONG).show()
 

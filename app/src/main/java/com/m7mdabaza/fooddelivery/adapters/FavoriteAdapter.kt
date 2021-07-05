@@ -12,33 +12,30 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.m7mdabaza.fooddelivery.R
-import com.m7mdabaza.fooddelivery.ui.activities.FoodPreviewActivity
-import com.m7mdabaza.fooddelivery.ui.activities.RestaurantActivity
-import com.m7mdabaza.fooddelivery.adapters.RestaurantRecyclerAdapter.RestaurantViewHolder
 import com.m7mdabaza.fooddelivery.roomDatabase.Food
 import com.m7mdabaza.fooddelivery.roomDatabase.FoodViewModel
-import java.util.*
+import com.m7mdabaza.fooddelivery.ui.activities.FoodPreviewActivity
+import com.m7mdabaza.fooddelivery.ui.activities.HomeActivity
+import java.util.ArrayList
 
-class RestaurantRecyclerAdapter : RecyclerView.Adapter<RestaurantViewHolder>() {
 
+class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
     private var restaurantModelList = ArrayList<Food>()
-    private lateinit var mContext: RestaurantActivity
+    private lateinit var mContext: HomeActivity
     private lateinit var mFoodViewModel: FoodViewModel
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.restaurant_item, parent, false)
 
         mFoodViewModel = ViewModelProvider(mContext).get(FoodViewModel(Application())::class.java)
 
-        return RestaurantViewHolder(view)
+        return FavoriteViewHolder(view)
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-
+    override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         val restaurantModel = restaurantModelList[position]
         holder.foodName.text = restaurantModel.foodName
         holder.foodCountry.text = restaurantModel.foodCountry
@@ -60,13 +57,11 @@ class RestaurantRecyclerAdapter : RecyclerView.Adapter<RestaurantViewHolder>() {
                 holder.foodFavorite.setImageResource(R.drawable.red_hart)
                 Toast.makeText(mContext, "Add Successfully!!", Toast.LENGTH_LONG).show()
 
-
             } else if (isFav) {
                 mFoodViewModel.addToFavorite(id, false)
                 isFav = false
                 holder.foodFavorite.setImageResource(R.drawable.white_hart)
                 Toast.makeText(mContext, "Removed Successfully!!", Toast.LENGTH_LONG).show()
-
 
             }
         }
@@ -78,14 +73,13 @@ class RestaurantRecyclerAdapter : RecyclerView.Adapter<RestaurantViewHolder>() {
             intent.putExtra("foodRate", restaurantModel.foodRate + "")
             mContext.startActivity(intent)
         }
-
     }
 
     override fun getItemCount(): Int {
         return restaurantModelList.size
     }
 
-    class RestaurantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class FavoriteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //var imageUrl: ImageView = itemView.findViewById(R.id.restaurantImage_item)
         var foodName: TextView = itemView.findViewById(R.id.restaurantFoodName_item)
         var foodCountry: TextView = itemView.findViewById(R.id.restaurantFoodCountry_item)
@@ -96,7 +90,7 @@ class RestaurantRecyclerAdapter : RecyclerView.Adapter<RestaurantViewHolder>() {
 
     }
 
-    fun setList(RestaurantModelList: ArrayList<Food>, mContext: RestaurantActivity) {
+    fun setList(RestaurantModelList: ArrayList<Food>, mContext: HomeActivity) {
         this.restaurantModelList = RestaurantModelList
         this.mContext = mContext
         notifyDataSetChanged()
