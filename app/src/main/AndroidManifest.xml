@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.m7mdabaza.fooddelivery">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,12 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDelivery"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.activities.AddFoodActivity"/>
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.activities.CurrentLocationActivity"
+            android:label="@string/title_activity_current_location"/>
+        <activity android:name=".ui.activities.AddFoodActivity" />
         <activity android:name=".ui.activities.FoodPreviewActivity" />
         <activity android:name=".ui.activities.RestaurantActivity" />
         <activity android:name=".onBoarding.activities.OnBoardingActivity" />
         <activity android:name=".ui.activities.HomeActivity" />
-
         <activity android:name=".ui.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

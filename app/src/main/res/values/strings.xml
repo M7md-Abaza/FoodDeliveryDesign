@@ -42,4 +42,5 @@
     <string name="food_rate">Food Rate</string>
     <string name="add_food">Add Food</string>
     <string name="get_started">Get Started...</string>
+    <string name="title_activity_current_location">Map</string>
 </resources>

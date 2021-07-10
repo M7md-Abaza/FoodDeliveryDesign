@@ -24,113 +24,225 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <EditText
-            android:id="@+id/foodName"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodNameTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
             android:hint="@string/food_name"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addImage"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/addImage">
 
-        <EditText
-            android:id="@+id/foodCountry"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodCountryTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
             android:hint="@string/food_country"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodName"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/foodNameTextInputLayout"
+            >
 
-        <EditText
-            android:id="@+id/foodTime"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodTimeTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
             android:hint="@string/food_time"
-            android:inputType="time"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodCountry"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/foodCountryTextInputLayout">
 
-        <EditText
-            android:id="@+id/foodPrice"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodPriceTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
             android:hint="@string/food_price"
-            android:inputType="number"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodTime"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/foodTimeTextInputLayout">
 
-        <EditText
-            android:id="@+id/foodRate"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodRateTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
             android:hint="@string/food_rate"
-            android:inputType="number"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodPrice"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/foodPriceTextInputLayout">
 
-        <EditText
-            android:id="@+id/foodDescription"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/foodDescriptionTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_edit_text_bg"
-            android:gravity="top"
             android:hint="@string/food_description"
-            android:minHeight="100dp"
-            android:padding="8dp"
-            android:textColor="@color/ui_Black"
             android:textColorHint="#A6A6A6"
+            app:boxBackgroundColor="@color/ui_white"
+            app:boxCornerRadiusBottomEnd="12sp"
+            app:boxCornerRadiusBottomStart="12sp"
+            app:boxCornerRadiusTopEnd="12sp"
+            app:boxCornerRadiusTopStart="12sp"
+            app:boxStrokeColor="@color/ui_green"
+            app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodRate"
-            tools:ignore="Autofill,TextFields" />
+            app:layout_constraintTop_toBottomOf="@+id/foodRateTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/foodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:gravity="top"
+                android:minHeight="80dp"
+                android:textColor="@color/ui_Black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button
@@ -138,7 +250,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/rounded_btn_bg"
@@ -150,7 +262,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/foodDescriptionTextInputLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
